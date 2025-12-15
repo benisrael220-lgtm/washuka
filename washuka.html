@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Washuka 💗</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ffdde1, #ee9ca7, #fbc2eb);
+    color: #3b1d2a;
+    overflow-x: hidden;
+}
+
+/* Floating hearts */
+.heart {
+    position: fixed;
+    font-size: 20px;
+    animation: float 6s linear infinite;
+    opacity: 0.6;
+}
+
+@keyframes float {
+    0% { transform: translateY(100vh); opacity: 0; }
+    50% { opacity: 0.8; }
+    100% { transform: translateY(-10vh); opacity: 0; }
+}
+
+/* Sections */
+section {
+    padding: 80px 20px;
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+}
+
+h1, h2 {
+    font-family: 'Playfair Display', serif;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+/* Images */
+.story-img {
+    width: 100%;
+    max-width: 420px;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    margin: 25px auto;
+    transition: transform 0.4s ease;
+}
+
+.story-img:hover {
+    transform: scale(1.05);
+}
+
+/* Button */
+button {
+    background: linear-gradient(45deg, #ff758c, #ff7eb3);
+    border: none;
+    color: white;
+    padding: 15px 35px;
+    font-size: 1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    transition: transform 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.08);
+}
+
+/* Hidden message */
+#hiddenMessage {
+    display: none;
+    font-size: 1.3rem;
+    margin-top: 30px;
+    color: #6a1b3a;
+    font-weight: 500;
+}
+
+/* Footer */
+footer {
+    padding: 40px;
+    text-align: center;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Floating hearts -->
+<script>
+for (let i = 0; i < 25; i++) {
+    let heart = document.createElement("div");
+    heart.className = "heart";
+    heart.innerHTML = "💗";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDuration = (Math.random() * 4 + 4) + "s";
+    document.body.appendChild(heart);
+}
+</script>
+
+<section>
+    <h1>Washuka 💕</h1>
+    <p>
+        This isn’t just a website.  
+        It’s a small piece of my heart, written just for you.
+    </p>
+</section>
+
+<section>
+    <h2>How It Started</h2>
+    <img src="photo1.jpg" class="story-img" alt="Us together">
+    <p>
+        From the beginning, you felt different.  
+        Your smile, your laugh, the way you exist so naturally —
+        it stayed with me longer than I expected.
+    </p>
+</section>
+
+<section>
+    <h2>The Moments I Hold Close</h2>
+    <img src="photo2.jpg" class="story-img" alt="Memories">
+    <p>
+        Some moments don’t need words.  
+        They sit quietly in the heart and remind you what feels real.
+        You are one of those moments for me.
+    </p>
+</section>
+
+<section>
+    <h2>What You Mean To Me</h2>
+    <img src="photo3.jpg" class="story-img" alt="Washuka">
+    <p>
+        Washuka, you are genuinely beautiful —  
+        not just in how you look, but in how you make things feel softer,
+        warmer, and more honest.
+    </p>
+
+    <button onclick="showMessage()">Tap Me 💗</button>
+
+    <div id="hiddenMessage">
+        I don’t promise perfection,  
+        but I promise honesty, effort, and care.  
+        I still choose you.
+    </div>
+</section>
+
+<footer>
+    Made with love 🤍
+</footer>
+
+<script>
+function showMessage() {
+    document.getElementById("hiddenMessage").style.display = "block";
+}
+</script>
+
+</body>
+</html>t
